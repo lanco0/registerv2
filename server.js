@@ -7,7 +7,7 @@ const fs = require("fs");
 
 //Uptime için__________________________________________________________________
 app.get("/", (req, res) => {
-  res.send("MustiDvclr, Discord BOT Altyapı v12");
+  res.send("DmirBOT Discord Bot Altyapısı");
 });
 app.listen(process.env.PORT);
 
