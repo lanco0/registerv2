@@ -16,7 +16,7 @@ const rolata = roller[Math.floor(Math.random()*roller.length)];
 let rol = await db.get(`vampirköylü${message.guild.id}${ardademruser.id}`,rolata) || "Rolsüz"
 var role = message.guild.roles.cache.find(x2 => x2.name === `${rol}`);
 db.push(`${message.guild.id}ölüliste`,message.mentions.users.first().tag)
-    db.set(`yaşıyor${message.guild.id}`, -1)
+    db.add(`yaşıyor${message.guild.id}`, -1)
     message.channel.send(`${dmirbotuser} isimli yetkili ${ardademruser} isimli oyuncuyu öldürdü.\n**Oyuncunun rolü:** ${rol}`)
     message.guild.member(mesaj).roles.add(role);
     db.delete(`vampirköylü${message.guild.id}${ardademruser.id}`,rolata)
