@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 
 const fs = require("fs");
-
+                              // DmirBOT Youtube Kanalına Ait Vampir Köylü Bot Altyapısı
 //Uptime için__________________________________________________________________
 app.get("/", (req, res) => {
   res.send("DmirBOT Discord Bot Altyapısı");
@@ -37,7 +37,8 @@ fs.readdir("./events/", (err, files) => {
 });
 
 client.on("ready", () => {
-  console.log(`${client.user.tag}! Aktif!`);
+  console.log(`DmirBOT Discord Bot Altyapısı BOT AKTİF`);
 });
 
 client.login(process.env.TOKEN);
+// DmirBOT Youtube Kanalına Ait Vampir Köylü Bot Altyapısı

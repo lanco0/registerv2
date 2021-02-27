@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const db = require('quick.db');
 const client = new Discord.Client();
-
+// DmirBOT Youtube Kanalına Ait Vampir Köylü Bot Altyapısı
 exports.run = async(client, message, args) => {
 
 
@@ -11,7 +11,7 @@ exports.run = async(client, message, args) => {
     let durum = db.get(`durum${message.guild.id}`) 
 
     message.channel.send(new Discord.MessageEmbed().setColor('#efff00').setDescription(`**Vampir Köylü Oyun Bilgileri**\n**Oyun Durumu:** ${durum} \n**Yaşayan Kişi Sayısı:** ${vampirköylüdurum}\n\nÖlüler;\n${ölüliste}`))
-
+// DmirBOT Youtube Kanalına Ait Vampir Köylü Bot Altyapısı
 
 
 }

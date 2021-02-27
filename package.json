@@ -1,7 +1,7 @@
 {
-  "name": "discordjs-bot-mrbaro",
+  "name": "DmirBOT",
   "version": "1.0.0",
-  "description": "Komut İşleyicisi Kullanan bir Discord.js botu",
+  "description": "DmirBOT Youtube Kanalına Ait Vampir Köylü Bot Altyapısı",
   "main": "node server.js",
   "scripts": {
     "start": "node server.js"

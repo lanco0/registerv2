@@ -4,11 +4,11 @@ const client = new Discord.Client();
 
 exports.run = async(client, message, args) => {
 if(!message.member.roles.cache.find(x => x.name == "Vampir Köylü Yetkilisi")) return message.channel.send(`Bu komutu kullanabilmek için önce **Vampir Köylü Yetkilisi** olmalısınız.`)
-
+// DmirBOT Youtube Kanalına Ait Vampir Köylü Bot Altyapısı
 let dmirbotuser = message.author
 let ardademruser = message.mentions.users.first()
 let mesaj = message.author || message.mentions.users.first()
-
+// DmirBOT Youtube Kanalına Ait Vampir Köylü Bot Altyapısı
 
 const roller = ["Köylü", "Büyücü"]
 const rolata = roller[Math.floor(Math.random()*roller.length)];

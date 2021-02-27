@@ -3,7 +3,7 @@ const db = require('quick.db');
 const client = new Discord.Client();
 
 exports.run = async(client, message, args) => {
-
+// DmirBOT Youtube Kanalına Ait Vampir Köylü Bot Altyapısı
      let ardademruser = message.author
 
      const roller = ["Köylü", "Büyücü"]
@@ -14,7 +14,7 @@ exports.run = async(client, message, args) => {
      ardademruser.send(new Discord.MessageEmbed().setColor('#efff00').setFooter('Sessiz ol kimseye söyleme!').setDescription(`İşte rolün: ${rol}`))
     message.channel.send(`${ardademruser} rolünü özelden gönderdim.`)
 
-
+// DmirBOT Youtube Kanalına Ait Vampir Köylü Bot Altyapısı
 
 }
 exports.conf = {
