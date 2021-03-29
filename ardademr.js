@@ -4,10 +4,10 @@ const express = require("express");
 const app = express();
 
 const fs = require("fs");
-                              // DmirBOT Youtube Kanalına Ait Vampir Köylü Bot Altyapısı
+                              // ArdaDemr Youtube Kanalına Ait Vampir Köylü Bot Altyapısı
 //Uptime için__________________________________________________________________
 app.get("/", (req, res) => {
-  res.send("DmirBOT Discord Bot Altyapısı");
+  res.send("ArdaDemr Discord Bot Altyapısı");
 });
 app.listen(process.env.PORT);
 
@@ -41,4 +41,4 @@ client.on("ready", () => {
 });
 
 client.login(process.env.TOKEN);
-// DmirBOT Youtube Kanalına Ait Vampir Köylü Bot Altyapısı
+// ArdaDemr Youtube Kanalına Ait Vampir Köylü Bot Altyapısı

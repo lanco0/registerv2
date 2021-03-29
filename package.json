@@ -1,10 +1,10 @@
 {
-  "name": "DmirBOT",
+  "name": "ArdaDemr",
   "version": "1.0.0",
-  "description": "DmirBOT Youtube Kanalına Ait Vampir Köylü Bot Altyapısı",
-  "main": "node server.js",
+  "description": "ArdaDemr Youtube Kanalına Ait Vampir Köylü Bot Altyapısı",
+  "main": "node ardademr.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node ardademr.js"
   },
   "dependencies": {
     "express": "^4.17.1",
