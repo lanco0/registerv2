@@ -1,8 +1,8 @@
-# BU ALTYAPI DMİRBOT YOUTUBE KANALINA AİTTİR
+# BU ALTYAPI ArdaDemr YOUTUBE KANALINA AİTTİR
 
 # KODLAYAN: ARDADEMR
 
-# DİSCORD: https://discord.gg/2emyQqvxxX
+# DİSCORD: https://discord.gg/RZwGEGKBct
 
 `
 VAMPİR KÖYLÜ BOT ALTYAPISI
@@ -13,7 +13,7 @@ VERDİĞİNİZ DESTEKTEN DOLAYI TEŞEKKÜRLER <3
 `
 
 `
-https://www.youtube.com/channel/UCaOmcJT3hXiXhyVL5VtfOGw
+https://www.youtube.com/channel/UCk2r0Vkh-ktRrseLrL-ZUCw
 `
 
 

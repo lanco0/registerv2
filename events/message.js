@@ -1,5 +1,5 @@
 const prefix = process.env.PREFIX;
-
+// ArdaDemr Youtube Kanalına ait vampir köylü bot altyapısı
 module.exports = (client, message) => {
   if (message.author.bot) return;
   if (message.channel.type == "dm") return;
@@ -13,3 +13,5 @@ module.exports = (client, message) => {
   let cmd = client.commands.get(command.slice(prefix.length));
   if (cmd) cmd.run(client, message, args);
 };
+
+// ArdaDemr Youtube Kanalına ait vampir köylü bot altyapısı

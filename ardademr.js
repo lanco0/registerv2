@@ -37,7 +37,7 @@ fs.readdir("./events/", (err, files) => {
 });
 
 client.on("ready", () => {
-  console.log(`DmirBOT Discord Bot Altyapısı BOT AKTİF`);
+  console.log(`ArdaDemr Discord Bot Altyapısı BOT AKTİF`);
 });
 
 client.login(process.env.TOKEN);
