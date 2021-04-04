@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
 
 	if(!message.member.roles.cache.find(x => x.name== "Kayıt Yetkilisi")) return message.channel.send(`Yeterli izne sahip değilsin.`)
 
-    if(message.channel.name !== "kayıt") return message.channel.send("Kayıtlar sadece kayıt kanalından yapılabilir.")
+    if(message.channel.id !== "828253621002305600") return message.channel.send("Kayıtlar sadece kayıt kanalından yapılabilir.")
 
     let ardademrverilecekrol = message.guild.roles.cache.find(x => x.name == "Kayıtlı Üye")
     if (message.guild.me.roles.highest.position <= ardademrverilecekrol.position) return message.channel.send(`Bu rol benim rolümün üstünde olduğu için vermeye iznim yok.`)

@@ -68,7 +68,6 @@ client.on('guildMemberAdd', async member  => {
 
 //------------------OTOROL
 client.on('guildMemberAdd', member => {
-var role = member.guild.roles.cache.find(role => role.name == "Kayıtsız ")
-let user = member.user
-user.roles.add(role);
+var role = member.guild.roles.cache.find(role => role.name == "Kayıtsız Üye")
+member.roles.add(role);
 });
