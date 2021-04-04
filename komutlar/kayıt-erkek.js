@@ -3,7 +3,7 @@ const db = require('quick.db');
 module.exports.run = async (client, message, args) => {
 
     if(message.guild.id !== "SUNUCU ID") return message.channel.send(`Bu komut bu sunucuda çalışmaz.`) // Bu bölümü istemiyorsanız silebilirsiniz.
-
+// ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
 	if(!message.member.roles.cache.find(x => x.name== "KAYIT YETKILISI ROL ADI")) return message.channel.send(`Yeterli izne sahip değilsin.`)
 
     if(message.channel.id !== "KANAL ID") return message.channel.send("Kayıtlar sadece kayıt kanalından yapılabilir.")
@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
       return message.reply(
         `Lütfen \`13\` karakteri geçmeyecek şekilde bir isim giriniz!`
       );
-
+// ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
 	       message.channel.send(`${ardademruser} isimli kullanıcıyı kayıt ettim.`).then(msg => {
                     setTimeout(function() {
                         message.guild.members.cache.get(ardademruser.id).setNickname(`● ${ardademrisim}`);
@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args) => {
 					setTimeout(function() {
                         message.guild.member(ardademruser).roles.add(message.guild.roles.cache.find(role=>role.name=="VERİLECEK ROL ADI").id);
                     }, 2000);
-					
+		// ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı			
 				})
 				
     db.add(`kayıt_${message.author.id}${message.guild.id}`,1)

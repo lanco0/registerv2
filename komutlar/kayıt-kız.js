@@ -5,12 +5,12 @@ module.exports.run = async (client, message, args) => {
     if(message.guild.id !== "SUNUCU ID") return message.channel.send(`Bu komut bu sunucuda çalışmaz.`) // Bu bölümü istemiyorsanız silebilirsiniz.
 
 	if(!message.member.roles.cache.find(x => x.name== "KAYIT YETKILISI ROL ADI")) return message.channel.send(`Yeterli izne sahip değilsin.`)
-
+// ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
     if(message.channel.id !== "KANAL ID") return message.channel.send("Kayıtlar sadece kayıt kanalından yapılabilir.")
 
     let ardademrverilecekrol = message.guild.roles.cache.find(x => x.name == "VERİLECEK ROL ADI")
     if (message.guild.me.roles.highest.position <= ardademrverilecekrol.position) return message.channel.send(`Bu rol benim rolümün üstünde olduğu için vermeye iznim yok.`)
-
+// ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
     let ardademruser = message.mentions.users.first()
     let ardademrisim = args.slice(1).join(" ");
     if(!ardademruser) return message.reply('bir kullanıcı etiketlemelisin.')
@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args) => {
 					setTimeout(function() {
                         message.guild.member(ardademruser).roles.add(message.guild.roles.cache.find(role=>role.name=="VERİLECEK ROL ADI").id);
                     }, 2000);
-					
+			// ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı		
 				})
 				
     db.add(`kayıt_${message.author.id}${message.guild.id}`,1)

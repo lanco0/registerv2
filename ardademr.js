@@ -25,7 +25,7 @@ fs.readdir("./komutlar/", (err, files) => {
     client.commands.set(cmd.help.name, cmd);
   });
 });
-
+// ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
 //EVENTS Yükleyici_______________________________________________________________
 fs.readdir("./events/", (err, files) => {
   if (err) return console.error(err);
@@ -71,3 +71,4 @@ client.on('guildMemberAdd', member => {
 var role = member.guild.roles.cache.find(role => role.name == "OTO VERİLECEK ROL ADI")
 member.roles.add(role);
 });
+// ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
