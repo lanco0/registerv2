@@ -58,7 +58,7 @@ client.on('guildMemberAdd', async member  => {
    const gecen = moment.duration(zaman1).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
     const ardademrembed = new Discord.MessageEmbed()
     .setColor('#efff00')
-     .setDescription(`**Hoş Geldin:** ${member}\n**Discord'a Kayıt Olma Süresi:** ${gecen}\n**Hesap Yeni Mi?:** ${ardademrzaman}\n\nSunucumuza kayıt olmak için gerçek ismini yaz ve bekle.\n<@&781175828439760927> rolüne sahip olan yetkililer kayıtını gerçekleştirecektir.`)
+     .setDescription(`**Hoş Geldin:** ${member}\n**Discord'a Kayıt Olma Süresi:** ${gecen}\n**Hesap Yeni Mi?:** ${ardademrzaman}\n\nSunucumuza kayıt olmak için gerçek ismini yaz ve bekle.`)
  client.channels.cache.get('KANAL ID').send(ardademrembed)
    
            });
