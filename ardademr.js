@@ -47,7 +47,7 @@ client.login(process.env.TOKEN);
 
 //------------------OTOMESAJ
 client.on('guildMemberAdd', async member  => {
-  if(member.guild.id!="826203367436976159") return false;
+  if(member.guild.id!="SUNUCU ID") return false;
  let member2 = member.user 
  let zaman = new Date().getTime() - member2.createdAt.getTime()
  var user = member2 
@@ -61,13 +61,13 @@ client.on('guildMemberAdd', async member  => {
     const ardademrembed = new Discord.MessageEmbed()
     .setColor('#efff00')
      .setDescription(`**Hoş Geldin:** ${member}\n**Discord'a Kayıt Olma Süresi:** ${gecen}\n**Hesap Yeni Mi?:** ${ardademrzaman}\n\nSunucumuza kayıt olmak için gerçek ismini yaz ve bekle.`)
- client.channels.cache.get('828253621002305600').send(ardademrembed)
+ client.channels.cache.get('KANAL ID').send(ardademrembed)
    
            });
 
 
 //------------------OTOROL
 client.on('guildMemberAdd', member => {
-var role = member.guild.roles.cache.find(role => role.name == "Kayıtsız Üye")
+var role = member.guild.roles.cache.find(role => role.name == "OTO VERİLECEK ROL ADI")
 member.roles.add(role);
 });

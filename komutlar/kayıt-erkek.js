@@ -2,13 +2,13 @@ const Discord = require("discord.js");
 const db = require('quick.db');
 module.exports.run = async (client, message, args) => {
 
-    if(message.guild.id !== "826203367436976159") return message.channel.send(`Bu komut bu sunucuda çalışmaz.`) // Bu bölümü istemiyorsanız silebilirsiniz.
+    if(message.guild.id !== "SUNUCU ID") return message.channel.send(`Bu komut bu sunucuda çalışmaz.`) // Bu bölümü istemiyorsanız silebilirsiniz.
 
-	if(!message.member.roles.cache.find(x => x.name== "Kayıt Yetkilisi")) return message.channel.send(`Yeterli izne sahip değilsin.`)
+	if(!message.member.roles.cache.find(x => x.name== "KAYIT YETKILISI ROL ADI")) return message.channel.send(`Yeterli izne sahip değilsin.`)
 
-    if(message.channel.id !== "828253621002305600") return message.channel.send("Kayıtlar sadece kayıt kanalından yapılabilir.")
+    if(message.channel.id !== "KANAL ID") return message.channel.send("Kayıtlar sadece kayıt kanalından yapılabilir.")
 
-    let ardademrverilecekrol = message.guild.roles.cache.find(x => x.name == "Kayıtlı Üye")
+    let ardademrverilecekrol = message.guild.roles.cache.find(x => x.name == "VERİLECEK ROL ADI")
     if (message.guild.me.roles.highest.position <= ardademrverilecekrol.position) return message.channel.send(`Bu rol benim rolümün üstünde olduğu için vermeye iznim yok.`)
 
     let ardademruser = message.mentions.users.first()
@@ -25,10 +25,10 @@ module.exports.run = async (client, message, args) => {
                         message.guild.members.cache.get(ardademruser.id).setNickname(`● ${ardademrisim}`);
                     }, 500);
 					setTimeout(function() {
-                        message.guild.member(ardademruser).roles.remove(message.guild.roles.cache.find(role=>role.name=="Kayıtsız Üye").id);
+                        message.guild.member(ardademruser).roles.remove(message.guild.roles.cache.find(role=>role.name=="ALINACAK ROL ADI").id);
                     }, 1500);
 					setTimeout(function() {
-                        message.guild.member(ardademruser).roles.add(message.guild.roles.cache.find(role=>role.name=="Kayıtlı Üye").id);
+                        message.guild.member(ardademruser).roles.add(message.guild.roles.cache.find(role=>role.name=="VERİLECEK ROL ADI").id);
                     }, 2000);
 					
 				})
