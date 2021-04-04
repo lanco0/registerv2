@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 
 const fs = require("fs");
-                              // ArdaDemr Youtube Kanalına Ait Vampir Köylü Bot Altyapısı
+// ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
 //Uptime için__________________________________________________________________
 app.get("/", (req, res) => {
   res.send("ArdaDemr Discord Bot Altyapısı");
@@ -41,4 +41,23 @@ client.on("ready", () => {
 });
 
 client.login(process.env.TOKEN);
-// ArdaDemr Youtube Kanalına Ait Vampir Köylü Bot Altyapısı
+// ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
+
+client.on('guildMemberAdd', async member  => {
+  if(member.guild.id!="SUNUCU ID") return false;
+ let member2 = member.user 
+ let zaman = new Date().getTime() - member2.createdAt.getTime()
+ var user = member2 
+ var ardademrzaman = [];
+ if(zaman < 172800000) {
+ ardademrzaman = `Hesap Yeni Açılmış`
+ } else {
+ ardademrzaman = `Hesap Yeni Açılmamış`}require("moment-duration-format");
+   let zaman1 = new Date().getTime() - user.createdAt.getTime()
+   const gecen = moment.duration(zaman1).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
+    const ardademrembed = new Discord.MessageEmbed()
+    .setColor('#efff00')
+     .setDescription(`**Hoş Geldin:** ${member}\n**Discord'a Kayıt Olma Süresi:** ${gecen}\n**Hesap Yeni Mi?:** ${ardademrzaman}\n\nSunucumuza kayıt olmak için gerçek ismini yaz ve bekle.\n<@&781175828439760927> rolüne sahip olan yetkililer kayıtını gerçekleştirecektir.`)
+ client.channels.cache.get('KANAL ID').send(ardademrembed)
+   
+           });
