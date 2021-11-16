@@ -2,8 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const express = require("express");
 const moment = require("moment");
-const disbut = require('discord-buttons')
-disbut(client);
+
 const app = express();
 const db = require('quick.db');
 const fs = require("fs");
@@ -79,12 +78,43 @@ member.roles.add(role);
 client.on('clickButton', (button) => {
   if (button.id === 'ardademrerkek') {
     db.add(`erkek_kayıt`,1)
-     button.clicker.member.roles.add("VERILECEK ROL ID"); // ERKEK | VERILECEK ROL ID
-    button.clicker.member.roles.remove("ALINACAK ROL ID"); // ERKEK | ALINACAK ROL ID
+     button.clicker.member.roles.add("910069486617493534"); // ERKEK | VERILECEK ROL ID
+    button.clicker.member.roles.remove("910069460637974538"); // ERKEK | ALINACAK ROL ID
   }
     if (button.id === 'ardademrkız') {
     db.add(`kız_kayıt`,1)
-     button.clicker.member.roles.add("VERILECEK ROL ID"); // KIZ | VERILECEK ROL ID
-    button.clicker.member.roles.remove("ALINACAK ROL ID"); // KIZ | ALINACAK ROL ID
+     button.clicker.member.roles.add("910069482498719754"); // KIZ | VERILECEK ROL ID
+    button.clicker.member.roles.remove("910069460637974538"); // KIZ | ALINACAK ROL ID
   }
 })
+
+
+client.on("ready",(button)=>{
+  client.ws.on('INTERACTION_CREATE', async interaction => {
+  
+     if(interaction.data.custom_id=="ardademrerkek"){
+     client.api.interactions(interaction.id, interaction.token).callback.post({
+      data: {
+          type: 4,
+          data: {
+              content: `Seni sunucumuza Erkek Üye olarak kayıt ettim. İyi eğlenceler.`,    
+              flags: "64"
+            }
+        }
+    }); 
+
+   };
+   
+      if(interaction.data.custom_id=="ardademrkız"){
+     client.api.interactions(interaction.id, interaction.token).callback.post({
+      data: {
+          type: 4,
+          data: {
+              content: `Seni sunucumuza Kız Üye olarak kayıt ettim. İyi eğlenceler.`,    
+              flags: "64"
+            }
+        }
+    }); 
+   };
+    });
+  });
