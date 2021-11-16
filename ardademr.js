@@ -2,8 +2,10 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const express = require("express");
 const moment = require("moment");
+const disbut = require('discord-buttons')
+disbut(client);
 const app = express();
-
+const db = require('quick.db');
 const fs = require("fs");
 // ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
 //Uptime için__________________________________________________________________
@@ -72,3 +74,17 @@ var role = member.guild.roles.cache.find(role => role.name == "OTO VERİLECEK RO
 member.roles.add(role);
 });
 // ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
+
+
+client.on('clickButton', (button) => {
+  if (button.id === 'ardademrerkek') {
+    db.add(`erkek_kayıt`,1)
+     button.clicker.member.roles.add("VERILECEK ROL ID"); // ERKEK | VERILECEK ROL ID
+    button.clicker.member.roles.remove("ALINACAK ROL ID"); // ERKEK | ALINACAK ROL ID
+  }
+    if (button.id === 'ardademrkız') {
+    db.add(`erkek_kayıt`,1)
+     button.clicker.member.roles.add("VERILECEK ROL ID"); // KIZ | VERILECEK ROL ID
+    button.clicker.member.roles.remove("ALINACAK ROL ID"); // KIZ | ALINACAK ROL ID
+  }
+})
