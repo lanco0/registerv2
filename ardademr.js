@@ -83,7 +83,7 @@ client.on('clickButton', (button) => {
     button.clicker.member.roles.remove("ALINACAK ROL ID"); // ERKEK | ALINACAK ROL ID
   }
     if (button.id === 'ardademrkız') {
-    db.add(`erkek_kayıt`,1)
+    db.add(`kız_kayıt`,1)
      button.clicker.member.roles.add("VERILECEK ROL ID"); // KIZ | VERILECEK ROL ID
     button.clicker.member.roles.remove("ALINACAK ROL ID"); // KIZ | ALINACAK ROL ID
   }

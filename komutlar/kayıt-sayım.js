@@ -4,9 +4,9 @@ exports.run = function(client, message, args) {
   
 // ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
   
-let erkek = db.fetch(`erkek_kayit`)
+let erkek = db.fetch(`erkek_kayıt`)
 if (erkek === null) erkek = 0 || "Erkek Kayıt Olan Yok";
-let kız = db.fetch(`kız_kayit`)
+let kız = db.fetch(`kız_kayıt`)
 if (kız === null) kız = 0 || "Erkek Kayıt Olan Yok";
 
   
