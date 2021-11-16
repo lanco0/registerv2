@@ -48,11 +48,11 @@ client.login(process.env.TOKEN);
 
 
 
-  let erkek = "" // ERKEK ROL ID
-  let kız = "" // KIZ ROL ID
-  let kayıtsız = "" // SUNUCUYA GELENE OTO VERILECEK ROL ID
-  let sunucu = "" // SUNUCU ID
-  let hosgeldin = "" // HOŞGELDİN KANAL ID 
+  let erkek = "910069486617493534" // ERKEK ROL ID
+  let kız = "910069482498719754" // KIZ ROL ID
+  let kayıtsız = "910069460637974538" // SUNUCUYA GELENE OTO VERILECEK ROL ID
+  let sunucu = "825517465886654484" // SUNUCU ID
+  let hosgeldin = "910071301555757076" // HOŞGELDİN KANAL ID 
   
 //------------------OTOMESAJ
 client.on('guildMemberAdd', async member  => {
