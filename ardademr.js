@@ -48,11 +48,11 @@ client.login(process.env.TOKEN);
 
 
 
-  let erkek = "910069486617493534" // ERKEK ROL ID
-  let kız = "910069482498719754" // KIZ ROL ID
-  let kayıtsız = "910069460637974538" // SUNUCUYA GELENE OTO VERILECEK ROL ID
-  let sunucu = "825517465886654484" // SUNUCU ID
-  let hosgeldin = "910071301555757076" // HOŞGELDİN KANAL ID 
+  let erkek = "BURAYA ID GIR" // ERKEK ROL ID
+  let kız = "BURAYA ID GIR" // KIZ ROL ID
+  let kayıtsız = "BURAYA ID GIR" // SUNUCUYA GELENE OTO VERILECEK ROL ID
+  let sunucu = "BURAYA ID GIR" // SUNUCU ID
+  let hosgeldin = "BURAYA ID GIR" // HOŞGELDİN KANAL ID 
   
 //------------------OTOMESAJ
 client.on('guildMemberAdd', async member  => {
@@ -69,7 +69,7 @@ client.on('guildMemberAdd', async member  => {
    const gecen = moment.duration(zaman1).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
     const ardademrembed = new Discord.MessageEmbed()
     .setColor('#efff00')
-     .setDescription(`**Hoş Geldin:** ${member}\n**Discord'a Kayıt Olma Süresi:** ${gecen}\n**Hesap Yeni Mi?:** ${ardademrzaman}\n\nSunucumuza kayıt olmak için gerçek ismini yaz ve bekle.`)
+     .setDescription(`**Hoş Geldin:** ${member}\n**Discord'a Kayıt Olma Süresi:** ${gecen}\n**Hesap Yeni Mi?:** ${ardademrzaman}`)
  client.channels.cache.get(hosgeldin).send(ardademrembed)
    
            });
