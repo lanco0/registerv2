@@ -2,7 +2,8 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const express = require("express");
 const moment = require("moment");
-
+const disbut = require('discord-buttons')
+disbut(client);
 const app = express();
 const db = require('quick.db');
 const fs = require("fs");
@@ -46,9 +47,16 @@ client.login(process.env.TOKEN);
 // ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
 
 
+
+  let erkek = "" // ERKEK ROL ID
+  let kız = "" // KIZ ROL ID
+  let kayıtsız = "" // SUNUCUYA GELENE OTO VERILECEK ROL ID
+  let sunucu = "" // SUNUCU ID
+  let hosgeldin = "" // HOŞGELDİN KANAL ID 
+  
 //------------------OTOMESAJ
 client.on('guildMemberAdd', async member  => {
-  if(member.guild.id!="SUNUCU ID") return false;
+  if(member.guild.id!= sunucu) return false;
  let member2 = member.user 
  let zaman = new Date().getTime() - member2.createdAt.getTime()
  var user = member2 
@@ -62,29 +70,32 @@ client.on('guildMemberAdd', async member  => {
     const ardademrembed = new Discord.MessageEmbed()
     .setColor('#efff00')
      .setDescription(`**Hoş Geldin:** ${member}\n**Discord'a Kayıt Olma Süresi:** ${gecen}\n**Hesap Yeni Mi?:** ${ardademrzaman}\n\nSunucumuza kayıt olmak için gerçek ismini yaz ve bekle.`)
- client.channels.cache.get('KANAL ID').send(ardademrembed)
+ client.channels.cache.get(hosgeldin).send(ardademrembed)
    
            });
 
 
 //------------------OTOROL
 client.on('guildMemberAdd', member => {
-var role = member.guild.roles.cache.find(role => role.name == "OTO VERİLECEK ROL ADI")
+var role = member.guild.roles.cache.find(role => role.id == kayıtsız)
 member.roles.add(role);
 });
 // ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
 
-
+  
 client.on('clickButton', (button) => {
+  
   if (button.id === 'ardademrerkek') {
     db.add(`erkek_kayıt`,1)
-     button.clicker.member.roles.add("910069486617493534"); // ERKEK | VERILECEK ROL ID
-    button.clicker.member.roles.remove("910069460637974538"); // ERKEK | ALINACAK ROL ID
+     button.clicker.member.roles.add(erkek); 
+    button.clicker.member.roles.remove(kayıtsız);
+    button.clicker.member.roles.remove(kız);
   }
     if (button.id === 'ardademrkız') {
     db.add(`kız_kayıt`,1)
-     button.clicker.member.roles.add("910069482498719754"); // KIZ | VERILECEK ROL ID
-    button.clicker.member.roles.remove("910069460637974538"); // KIZ | ALINACAK ROL ID
+     button.clicker.member.roles.add(kız); 
+    button.clicker.member.roles.remove(kayıtsız); 
+       button.clicker.member.roles.remove(erkek); 
   }
 })
 

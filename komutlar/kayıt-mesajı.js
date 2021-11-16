@@ -1,7 +1,6 @@
 const discord = require('discord.js');
 const disbut = require('discord-buttons')
 const client = new discord.Client();
-disbut(client);
 
 exports.run = async (client, message, args) => { 
 
@@ -13,7 +12,7 @@ exports.run = async (client, message, args) => {
     let button8 = new disbut.MessageButton()
     .setStyle('red') 
     .setLabel('Kız') 
-    .setID('ardademrkiz')
+    .setID('ardademrkız')
 
     message.channel.send(" ", {
         buttons:[

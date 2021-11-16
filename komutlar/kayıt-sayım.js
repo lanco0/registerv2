@@ -7,7 +7,7 @@ exports.run = function(client, message, args) {
 let erkek = db.fetch(`erkek_kayıt`)
 if (erkek === null) erkek = 0 || "Erkek Kayıt Olan Yok";
 let kız = db.fetch(`kız_kayıt`)
-if (kız === null) kız = 0 || "Erkek Kayıt Olan Yok";
+if (kız === null) kız = 0 || "Kız Kayıt Olan Yok";
 
   
 var embed = new Discord.MessageEmbed()
