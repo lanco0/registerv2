@@ -2,12 +2,13 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const express = require("express");
 const moment = require("moment");
+const ayarlar = require('./ayarlar.json'); 
 const disbut = require('discord-buttons')
 disbut(client);
 const app = express();
 const db = require('quick.db');
 const fs = require("fs");
-
+var prefix = ayarlar.prefix;
 // ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
 //Uptime için__________________________________________________________________
 app.get("/", (req, res) => {
