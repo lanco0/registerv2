@@ -7,6 +7,7 @@ disbut(client);
 const app = express();
 const db = require('quick.db');
 const fs = require("fs");
+
 // ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
 //Uptime için__________________________________________________________________
 app.get("/", (req, res) => {
@@ -43,7 +44,7 @@ client.on("ready", () => {
   console.log(`ArdaDemr Discord Bot Altyapısı BOT AKTİF`);
 });
 
-client.login(process.env.TOKEN);
+
 // ArdaDemr Youtube Kanalına ait KAYIT bot altyapısı
 
 
